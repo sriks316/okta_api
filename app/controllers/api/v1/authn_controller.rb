@@ -3,7 +3,7 @@ require 'net/http'
 class Api::V1::AuthnController < ApplicationController
 
 	def factors
-		url = URI("https://dev-254942.okta.com/api/v1/authn/factors/#{params[:factor_id]}/verify")
+		url = URI("#{API_URL}/authn/factors/#{params[:factor_id]}/verify")
 		http = Net::HTTP.new(url.host, url.port)
 		http.use_ssl = true
 		request = Net::HTTP::Post.new(url)

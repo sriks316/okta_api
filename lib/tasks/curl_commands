@@ -1,0 +1,11 @@
+ curl -X POST \
+  http://localhost:3002/api/v1/oauth2/aus1r7die2bWePXex357/token \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Basic MG9hMXF4NjBhMFdITGwzM1YzNTc6bkdKUzk5eXVaaGNEV1ZwOWhLTlRjLW8yaWVtU0R3NFJWZlJ2SHEtYw==' \
+  -d 'grant_type=password&username=jroot&password=T3ster316&scope=openid%20profile' | json_pp
+
+
+curl -X GET \
+  http://localhost:3002/api/v1/oauth2/aus1r7die2bWePXex357/userinfo \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer eyJraWQiOiJtVkl4alpBU2ZpWDAzOVl2anl5U2NFSFJhVkdSRVYwamtSSDU0WlRqVU9jIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULlp6OVNkZWs4Z2FzekROWWVXS1k5ZVpUdEgwSGQ2TFU3TEhTVGVCVi16d1EiLCJpc3MiOiJodHRwczovL2Rldi0yNTQ5NDIub2t0YS5jb20vb2F1dGgyL2F1czFyN2RpZTJiV2VQWGV4MzU3IiwiYXVkIjoiYXBpOi8vbmF0aXZlYXBwIiwiaWF0IjoxNTczNDA4NTQ5LCJleHAiOjE1NzM0MjI5NDksImNpZCI6IjBvYTFxeDYwYTBXSExsMzNWMzU3IiwidWlkIjoiMDB1MXMxbzZocnFQQXRlQlQzNTciLCJzY3AiOlsicHJvZmlsZSIsIm9wZW5pZCJdLCJzdWIiOiJqcm9vdEBva3RhLmNvbSJ9.a0aqg8yd8rl996E0-vY6YjFEqhkX_U_Jh12BV9CaiPiN55Aiotek7bJMiWM1IEKzqgy1M6grQyj8BEanKnOk4hzvh6WKm3C95FEUFjGo63zW2NnAc7vmHK8VBm_inXj0v1XbhVfoEMedch9ZHocXA4Y8Ny12zaRcw0mgXOXZ10vIqSosz7biw2vm7GxLboyGUJA_i2kRmzrqPXhlNkkSo9SFjrYu4uZLdLsdPdRQTaI099u6-lAaRniAeXyu5A1ychYPClYpJ4IDiUdsioG-gxeb7dmqfAjlH9VitfLUPEvkS85cVH0KiKT1_hTP96no2jqh26OOyvMWPju8Vu2cIA' \
